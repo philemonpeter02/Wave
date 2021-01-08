@@ -1,22 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import CardSection from "../components/CardSection/CardSection"
+import HeroSection from "../components/Hero/Hero"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import WaveSection from "../components/WaveSection/WaveSection"
+import CellSection from "../components/Cell/CellSection"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+    
+    <HeroSection />
+    <CardSection />
+    <WaveSection image={require('../images/background2.jpg')}
+                 logo={require('../images/logo-react.png')}
+                 title="React for Designers"
+                 text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with components,
+                       Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify." />
+   <CellSection />
   </Layout>
+  
 )
 
 export default IndexPage
